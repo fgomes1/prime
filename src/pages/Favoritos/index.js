@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+
+import './favoritos.css'
 const Favoritos = () => {
     const [filmes, seteFilmes] = useState([])
 
