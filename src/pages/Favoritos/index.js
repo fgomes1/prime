@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-
+import { toast } from "react-toastify"
 import './favoritos.css'
 const Favoritos = () => {
     const [filmes, seteFilmes] = useState([])
@@ -19,6 +19,7 @@ const Favoritos = () => {
         seteFilmes(filtroFilmes)
 
         localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes))//converção ja que nao se pode passar um objeto
+        toast.success("O filme foi removido com sucesso!")
     }
 
     return (
