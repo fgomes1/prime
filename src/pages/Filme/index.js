@@ -36,7 +36,7 @@ function Filme() {
         return () => {
             console.log("COMPONENTE FOI DESMONTADO")
         }
-    }, [])
+    }, [id, navigate])
     if (loading) {
         return (
             <div className="filme-info">
@@ -58,7 +58,7 @@ function Filme() {
             <div className='area-buttons'>
                 <button>Salvar</button>
                 <button>
-                    <a href='#'>
+                    <a rel="external" target="blank" href={`https://youtube.com/results?search_query=${filme.title} Trailer`}>
                         Trailer 
                     </a>
                 </button>
